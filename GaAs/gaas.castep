@@ -1,0 +1,1339 @@
+ +-------------------------------------------------+
+ |                                                 |
+ |      CCC   AA    SSS  TTTTT  EEEEE  PPPP        |
+ |     C     A  A  S       T    E      P   P       |
+ |     C     AAAA   SS     T    EEE    PPPP        |
+ |     C     A  A     S    T    E      P           |
+ |      CCC  A  A  SSS     T    EEEEE  P           |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Academic Release CASTEP version 23.1 |
+ | Ab Initio Total Energy Program                  |
+ |                                                 |
+ | Authors:                                        |
+ | M. Segall, M. Probert, C. Pickard, P. Hasnip,   |
+ | S. Clark, K. Refson, J. R. Yates, M. Payne      |
+ |                                                 |
+ | Contributors:                                   |
+ | P. Lindan, P. Haynes, J. White, V. Milman,      |
+ | N. Govind, M. Gibson, P. Tulip, V. Cocula,      |
+ | B. Montanari, D. Quigley, M. Glover,            |
+ | L. Bernasconi, A. Perlov, M. Plummer,           |
+ | E. McNellis, J. Meyer, J. Gale, D. Jochym       |
+ | J. Aarons, B. Walker, R. Gillen, D. Jones       |
+ | T. Green, I. J. Bush, C. J. Armstrong,          |
+ | E. J. Higgins, E. L. Brown, M. S. McFly,        |
+ | J. Wilkins, B-C. Shih, P. J. P. Byrne,          |
+ | R. J. Maurer, J. C. Womack, J. Dziedzic,        |
+ | A. Bartok-Partay, L. LeBlanc, T. K. Stenczel,   |
+ | J. Kermode, S. Sturniolo, B. Shi, B. Durham     |
+ | M. Evans, M. J. Smith                           |
+ |                                                 |
+ | Copyright (c) 2000 - 2022                       |
+ |                                                 |
+ |     Distributed under license from Cambridge    |
+ |     Enterprise for academic use only.           |
+ |                                                 |
+ | Please cite                                     |
+ |                                                 |
+ |     "First principles methods using CASTEP"     |
+ |                                                 |
+ |         Zeitschrift fuer Kristallographie       |
+ |           220(5-6) pp. 567-570 (2005)           |
+ |                                                 |
+ | S. J. Clark, M. D. Segall, C. J. Pickard,       |
+ | P. J. Hasnip, M. J. Probert, K. Refson,         |
+ | M. C. Payne                                     |
+ |                                                 |
+ |       in all publications arising from          |
+ |              your use of CASTEP                 |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ |              http://www.castep.org              |
+ |                                                 |
+ +-------------------------------------------------+
+ 
+ 
+ 
+ Compiled for linux_x86_64_ifort on Fri, 17 Feb 2023 16:03:05 +0000
+ from code version 3cd9b0f+  gw_castep_22  Fri Feb 17 15:02:34 2023 +0000
+ Compiler: Intel Fortran 2021.2.0; Optimisation: fast
+ Comms   : Intel(R) MPI Library 2021.2 for Linux* OS
+ MATHLIBS: Intel MKL(2021.2-Product) (LAPACK version 3.9.0)
+ FFT Lib : mkl
+ Fundamental constants values: CODATA 2018
+ 
+ Run started: Fri, 17 Feb 2023 16:20:52 +0000
+ +-------------------------------------------------+
+ |                                                 |
+ |  D D D D    F F F F F  P P P P     T T T T T    |
+ |  D       D  F          P       P       T        |
+ |  D       D  F F F F    P P P P         T        |
+ |  D       D  F          P               T        |
+ |  D D D D    F          P               T        |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Castep Linear Response (DFPT)        |
+ |                                                 |
+ | Copyright (c) 2006 - 2022                       |
+ |                                                 |
+ | Please cite the following publications in all   |
+ | work arising from your use of CASTEP LR.        |
+ |                                                 |
+ | K. Refson, S. J. Clark and P. R. Tulip          |
+ | Variational density functional perturbation     |
+ | theory for dielectrics and lattice dynamics     |
+ | Phys. Rev. B 73(15), 155114 (2006)              |
+ +-------------------------------------------------+
+ 
+ 
+ Pseudo atomic calculation performed for Ga 3d10 4s2 4p1
+ 
+ Converged in 34 iterations to a total energy of -1706.4086 eV
+ 
+ Pseudo atomic calculation performed for As 3d10 4s2 4p3
+ 
+ Converged in 37 iterations to a total energy of -2452.1008 eV
+ Calculation parallelised over 200 processes.
+ Data is distributed by k-point(200-way)
+
+ ************************************ Title ************************************
+ 
+
+ ***************************** General Parameters ******************************
+  
+ output verbosity                               : normal  (1)
+ write checkpoint data to                       : gaas.check
+ type of calculation                            : E-field calculation
+ stress calculation                             : off
+ density difference calculation                 : off
+ electron localisation func (ELF) calculation   : off
+ Hirshfeld analysis                             : off
+ polarisation (Berry phase) analysis            : off
+ molecular orbital projected DOS                : off
+ deltaSCF calculation                           : off
+ unlimited duration calculation
+ timing information                             : on
+ memory usage estimate                          : on
+ write extra output files                       : on
+ write final potential to formatted file        : off
+ write final density to formatted file          : off
+ write BibTeX reference list                    : on
+ write OTFG pseudopotential files               : on
+ write electrostatic potential file             : on
+ write bands file                               : on
+ checkpoint writing                             : off
+  
+ output         length unit                     : A
+ output           mass unit                     : amu
+ output           time unit                     : ps
+ output         charge unit                     : e
+ output           spin unit                     : hbar/2
+ output         energy unit                     : eV
+ output          force unit                     : eV/A
+ output       velocity unit                     : A/ps
+ output       pressure unit                     : GPa
+ output     inv_length unit                     : 1/A
+ output      frequency unit                     : cm-1
+ output force constant unit                     : eV/A**2
+ output         volume unit                     : A**3
+ output   IR intensity unit                     : (D/A)**2/amu
+ output         dipole unit                     : D
+ output         efield unit                     : eV/A/e
+ output        entropy unit                     : J/mol/K
+ output    efield chi2 unit                     : pm/V
+  
+ wavefunctions paging                           : none
+ random number generator seed                   :  162059603
+ data distribution                              : optimal for this architecture
+ optimization strategy                          : balance speed and memory
+
+ *********************** Exchange-Correlation Parameters ***********************
+  
+ using functional                               : Perdew Burke Ernzerhof
+ relativistic treatment                         : Koelling-Harmon
+ DFT+D: Semi-empirical dispersion correction    : off
+
+ ************************* Pseudopotential Parameters **************************
+  
+ pseudopotential representation                 : reciprocal space
+ <beta|phi> representation                      : reciprocal space
+ spin-orbit coupling                            : off
+
+ **************************** Basis Set Parameters *****************************
+  
+ plane wave basis set cut-off                   :  1200.0000   eV
+ size of standard grid                          :     1.7500
+ size of   fine   gmax                          :    31.0576   1/A
+ largest prime factor in FFT                    :          5
+ finite basis set correction                    : none
+
+ **************************** Electronic Parameters ****************************
+  
+ number of  electrons                           :  28.00    
+ net charge of system                           :  0.000    
+ treating system as non-spin-polarized
+ number of bands                                :         14
+
+ ********************* Electronic Minimization Parameters **********************
+  
+ Method: Treating system as non-metallic,
+         and number of  SD  steps               :          1
+         and number of  CG  steps               :          4
+  
+ total energy / atom convergence tol.           : 0.1000E-09   eV
+ max force / atom convergence tol.              : ignored
+ convergence tolerance window                   :          3   cycles
+ max. number of SCF cycles                      :        150
+ periodic dipole correction                     : NONE
+
+ *********************** Population Analysis Parameters ************************
+  
+ Population analysis with cutoff                :  3.000       A
+ Population analysis output                     : summary and pdos components
+
+ ***************************** E-Field Parameters ******************************
+  
+ E-field convergence tolerance                  : 0.1000E-04   A**3
+ DFPT solver method                             : AllBands (Gonze variational method)
+ ionic contribution to permittivity             : included
+ treating system as a crystal, 
+ => ignoring 3 lowest modes when calculating ionic  contribution to permittivity
+ calculation with frequency spacing             : 0.4556E-05   cm-1
+ Q-factor for lineshape broadening              :    50.0000
+ calculate non-linear optical properties        : OFF
+ max. number of E-field cycles                  :         50
+ max. number of E-field CG steps                :          0
+ convergence tolerance window                   :          2   cycles
+ band convergence tolerance                     : 0.1000E-08   eV
+
+ ******************************* Developer Code ********************************
+  
+ gw_convergence_win = 2
+ gw_energy_tol = 1.0e-6
+ gw_tol = 1.0e-9
+ gw_max_cycles = 1
+ start_omega = 0.1
+ end_omega = 6.1
+ num_freq = 121
+ write_stat = true
+
+ *******************************************************************************
+  
+ 
+                           -------------------------------
+                                      Unit Cell
+                           -------------------------------
+        Real Lattice(A)                      Reciprocal Lattice(1/A)
+     4.0659931     0.0000000     0.0000000        1.545301506  -0.892180240  -0.630866698
+     2.0329966     3.5212533     0.0000000        0.000000000   1.784360481  -0.630866698
+     2.0329966     1.1737511     3.3198695        0.000000000   0.000000000   1.892600094
+ 
+                       Lattice parameters(A)       Cell Angles
+                    a =      4.065993          alpha =   60.000000
+                    b =      4.065993          beta  =   60.000000
+                    c =      4.065993          gamma =   60.000000
+ 
+                       Current cell volume =            47.531873       A**3
+                                   density =             3.043108   AMU/A**3
+                                           =             5.053199     g/cm^3
+ 
+                           -------------------------------
+                                     Cell Contents
+                           -------------------------------
+                         Total number of ions in cell =    2
+                      Total number of species in cell =    2
+                        Max number of any one species =    1
+ 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            x  Element    Atom        Fractional coordinates of atoms  x
+            x            Number           u          v          w      x
+            x----------------------------------------------------------x
+            x  Ga           1         0.000000   0.000000   0.000000   x 
+            x  As           1         0.750000   0.750000   0.750000   x 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ 
+ 
+                         No user defined ionic velocities
+ 
+                           -------------------------------
+                                   Details of Species
+                           -------------------------------
+ 
+                               Mass of species in AMU
+                                    Ga   69.7230000
+                                    As   74.9216000
+ 
+                          Electric Quadrupole Moment (Barn)
+                                    Ga    0.1070000 Isotope 71
+                                    As    0.3140000 Isotope 75
+ 
+                          Files used for pseudopotentials:
+                                    Ga ga-optgga1.recpot
+                                    As as-optgga1.recpot
+ 
+                           -------------------------------
+                              k-Points For BZ Sampling
+                           -------------------------------
+                       MP grid size for SCF calculation is 20 20 20
+                            with an offset of   0.000  0.000  0.000
+                       Number of kpoints used =          4000
+ 
+                           -------------------------------
+                               Symmetry and Constraints
+                           -------------------------------
+ 
+                      Maximum deviation from symmetry =  0.00000         ANG
+ 
+                      Number of symmetry operations   =           1
+                      Number of ionic constraints     =           3
+                      Point group of crystal =     1: C1, 1, 1
+                      Space group of crystal =   216: F-43m, F -4 2 3
+ 
+             Set iprint > 1 for details on symmetry rotations/translations
+ 
+                         Centre of mass is constrained
+             Set iprint > 1 for details of linear ionic constraints
+ 
+                         Number of cell constraints= 0
+                         Cell constraints are:  1 2 3 4 5 6
+ 
+                         External pressure/stress (GPa)
+                          0.00000   0.00000   0.00000
+                                    0.00000   0.00000
+                                              0.00000
+ 
++---------------- MEMORY AND SCRATCH DISK ESTIMATES PER PROCESS --------------+
+|                                                     Memory          Disk    |
+| Baseline code, static data and system overhead     4156.0 MB         0.0 MB |
+| BLAS internal memory storage                          0.0 MB         0.0 MB |
+| Model and support data                               55.1 MB         0.0 MB |
+| Electronic energy minimisation requirements         103.1 MB         0.0 MB |
+| Force calculation requirements                       10.4 MB         0.0 MB |
+|                                               ----------------------------- |
+| Approx. total storage required per process         4314.2 MB         0.0 MB |
+|                                                                             |
+| Requirements will fluctuate during execution and may exceed these estimates |
++-----------------------------------------------------------------------------+
+Calculating approximate eigenstates for fixed initial Hamiltonian
+Cut-off for approx. calculation is   89.988 eV
+Improving approx. states at cut-off of  607.000 eV
+Resetting cut-off to 1200.000 eV
+Improving states further at cut-off of 1200.000 eV
+Calculating total energy with cut-off of 1200.000 eV.
+------------------------------------------------------------------------ <-- SCF
+SCF loop      Energy                           Energy gain       Timer   <-- SCF
+                                               per atom          (sec)   <-- SCF
+------------------------------------------------------------------------ <-- SCF
+Initial  -4.16260579E+003                                         25.92  <-- SCF
+      1  -4.16584292E+003                    1.61856654E+000      36.62  <-- SCF
+      2  -4.16639318E+003                    2.75133256E-001      47.27  <-- SCF
+      3  -4.16660805E+003                    1.07433120E-001      57.99  <-- SCF
+      4  -4.16670798E+003                    4.99664919E-002      68.70  <-- SCF
+      5  -4.16675725E+003                    2.46320940E-002      79.37  <-- SCF
+      6  -4.16678258E+003                    1.26683134E-002      90.08  <-- SCF
+      7  -4.16679627E+003                    6.84044316E-003     100.84  <-- SCF
+      8  -4.16680425E+003                    3.99428569E-003     111.50  <-- SCF
+      9  -4.16680913E+003                    2.43618380E-003     122.13  <-- SCF
+     10  -4.16681196E+003                    1.41881347E-003     132.86  <-- SCF
+     11  -4.16681349E+003                    7.65398844E-004     143.62  <-- SCF
+     12  -4.16681430E+003                    4.00149340E-004     154.49  <-- SCF
+     13  -4.16681472E+003                    2.13426876E-004     165.18  <-- SCF
+     14  -4.16681496E+003                    1.18489181E-004     175.83  <-- SCF
+     15  -4.16681510E+003                    6.83183621E-005     186.68  <-- SCF
+     16  -4.16681518E+003                    4.05793383E-005     197.32  <-- SCF
+     17  -4.16681523E+003                    2.46548333E-005     208.00  <-- SCF
+     18  -4.16681526E+003                    1.52575535E-005     218.75  <-- SCF
+     19  -4.16681528E+003                    9.59051816E-006     230.00  <-- SCF
+     20  -4.16681529E+003                    6.11362168E-006     240.79  <-- SCF
+     21  -4.16681530E+003                    3.94724887E-006     251.54  <-- SCF
+     22  -4.16681530E+003                    2.57927362E-006     262.28  <-- SCF
+     23  -4.16681530E+003                    1.70425088E-006     272.97  <-- SCF
+     24  -4.16681531E+003                    1.13804828E-006     283.63  <-- SCF
+     25  -4.16681531E+003                    7.67452512E-007     294.27  <-- SCF
+     26  -4.16681531E+003                    5.22367011E-007     304.93  <-- SCF
+     27  -4.16681531E+003                    3.58604288E-007     315.68  <-- SCF
+     28  -4.16681531E+003                    2.48159742E-007     326.41  <-- SCF
+     29  -4.16681531E+003                    1.73003236E-007     337.14  <-- SCF
+     30  -4.16681531E+003                    1.21413595E-007     347.89  <-- SCF
+     31  -4.16681531E+003                    8.57446584E-008     358.54  <-- SCF
+     32  -4.16681531E+003                    6.08939588E-008     369.17  <-- SCF
+     33  -4.16681531E+003                    4.34655225E-008     379.81  <-- SCF
+     34  -4.16681531E+003                    3.11704896E-008     390.45  <-- SCF
+     35  -4.16681531E+003                    2.24469907E-008     401.19  <-- SCF
+     36  -4.16681531E+003                    1.62219415E-008     411.80  <-- SCF
+     37  -4.16681531E+003                    1.17671914E-008     422.40  <-- SCF
+     38  -4.16681531E+003                    8.56495310E-009     433.13  <-- SCF
+     39  -4.16681531E+003                    6.24399737E-009     443.87  <-- SCF
+     40  -4.16681531E+003                    4.56921242E-009     454.52  <-- SCF
+     41  -4.16681531E+003                    3.34608963E-009     465.24  <-- SCF
+     42  -4.16681531E+003                    2.45861988E-009     475.84  <-- SCF
+     43  -4.16681531E+003                    1.80742204E-009     486.55  <-- SCF
+     44  -4.16681531E+003                    1.33487824E-009     497.18  <-- SCF
+     45  -4.16681531E+003                    9.83757311E-010     507.79  <-- SCF
+     46  -4.16681531E+003                    7.28150557E-010     518.44  <-- SCF
+     47  -4.16681531E+003                    5.40602484E-010     529.11  <-- SCF
+     48  -4.16681531E+003                    3.92497512E-010     539.77  <-- SCF
+     49  -4.16681531E+003                    2.98143430E-010     550.46  <-- SCF
+     50  -4.16681531E+003                    2.18870534E-010     561.13  <-- SCF
+     51  -4.16681531E+003                    1.64732946E-010     571.81  <-- SCF
+     52  -4.16681531E+003                    1.19489390E-010     582.60  <-- SCF
+     53  -4.16681531E+003                    8.77802317E-011     593.32  <-- SCF
+     54  -4.16681531E+003                    6.92187730E-011     603.92  <-- SCF
+     55  -4.16681531E+003                    5.06573144E-011     614.69  <-- SCF
+     56  -4.16681531E+003                    3.40293409E-011     625.40  <-- SCF
+------------------------------------------------------------------------ <-- SCF
+ 
+Final energy =  -4166.815311832     eV
+(energy not corrected for finite basis set)
+ 
+  scf kpoint data stored
+ 
+--------------------------------------------------------------------------------
+ Comms strategy in GW module 
+ Data is distributed by G-vector(1-way) and k-point(200-way) and band(1-way)
+--------------------------------------------------------------------------------
+ 
+Energy Unit:  eV
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 123.0  E_2       0.024281254                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 122.1  E_2       0.024370680                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.5  E_2       0.024494237                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 117.9  E_2       0.024660065                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 115.8  E_2       0.024864765                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.2  E_2       0.025110987                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 115.2  E_2       0.025409462                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 114.0  E_2       0.025773474                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 113.9  E_2       0.026206377                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.5  E_2       0.026733864                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.9  E_2       0.027377497                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.3  E_2       0.028171273                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.5  E_2       0.029144675                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.6  E_2       0.030146825                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.0  E_2       0.030266631                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 113.0  E_2       0.028696454                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.4  E_2       0.027242859                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.3  E_2       0.027284657                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.6  E_2       0.028525218                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.5  E_2       0.029781393                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 108.3  E_2       0.030245710                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.3  E_2       0.030465549                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.7  E_2       0.031720906                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.5  E_2       0.032094680                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.8  E_2       0.030804684                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 108.5  E_2       0.030546179                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 108.3  E_2       0.031553996                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 108.9  E_2       0.032705041                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.3  E_2       0.034368869                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.7  E_2       0.036111560                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.8  E_2       0.037134515                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.4  E_2       0.038573314                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.3  E_2       0.038978914                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.4  E_2       0.037716390                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.8  E_2       0.037412909                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.4  E_2       0.039699684                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.0  E_2       0.043870904                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.5  E_2       0.048254908                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.1  E_2       0.051773855                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 113.4  E_2       0.054086655                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.2  E_2       0.054824277                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.9  E_2       0.055719974                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.0  E_2       0.060085679                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.2  E_2       0.066820505                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.2  E_2       0.073072070                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.8  E_2       0.073732687                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 109.0  E_2       0.071096254                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.8  E_2       0.066995573                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.7  E_2       0.058872036                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.2  E_2       0.053322003                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.0  E_2       0.054266526                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 110.9  E_2       0.056829800                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.1  E_2       0.054806704                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 113.8  E_2       0.049927374                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.0  E_2       0.045368862                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 113.3  E_2       0.039018837                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.4  E_2       0.034892658                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 111.8  E_2       0.034394621                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 115.7  E_2       0.034592268                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 112.8  E_2       0.034465701                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 113.4  E_2       0.032587559                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.7  E_2       0.029879311                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 117.8  E_2       0.029395918                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.7  E_2       0.031098409                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 114.7  E_2       0.032954628                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.9  E_2       0.033658294                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.3  E_2       0.034415962                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.4  E_2       0.033803860                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.1  E_2       0.033581866                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 115.2  E_2       0.034717133                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.0  E_2       0.036228109                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.2  E_2       0.037921663                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.8  E_2       0.040155970                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.1  E_2       0.043214246                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 117.8  E_2       0.046478781                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 115.6  E_2       0.051106963                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.5  E_2       0.058257494                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 115.7  E_2       0.065066741                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 117.6  E_2       0.070360388                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.2  E_2       0.073854727                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.2  E_2       0.076265067                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.2  E_2       0.078505056                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 117.2  E_2       0.080911197                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 116.6  E_2       0.085704109                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.1  E_2       0.094318222                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.8  E_2       0.106053650                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.8  E_2       0.119731550                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.8  E_2       0.132095587                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.8  E_2       0.132930366                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.9  E_2       0.116316866                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.9  E_2       0.098892367                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 121.3  E_2       0.086192765                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.1  E_2       0.075756121                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 121.3  E_2       0.065373156                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 114.8  E_2       0.058630397                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.2  E_2       0.051384049                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.8  E_2       0.044472124                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.2  E_2       0.039654752                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.3  E_2       0.035357140                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.7  E_2       0.032394512                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.5  E_2       0.030981609                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 121.9  E_2       0.030114830                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 122.5  E_2       0.028899435                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.0  E_2       0.028075234                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.1  E_2       0.026956085                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 122.2  E_2       0.025467401                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 121.3  E_2       0.023660846                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.8  E_2       0.022159911                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.8  E_2       0.020861002                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 121.3  E_2       0.019504962                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.7  E_2       0.017928690                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.8  E_2       0.017135619                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.7  E_2       0.016739211                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 123.6  E_2       0.016375962                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 119.3  E_2       0.016517259                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 118.9  E_2       0.017141192                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 120.3  E_2       0.017966971                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 123.0  E_2       0.019539170                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 124.2  E_2       0.021743538                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 122.4  E_2       0.022937567                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps 121.3  E_2       0.022284106                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+ 
+ ==============================================================================
+ +                                                                            +
+ +                         GW NSCF Dielectric Response                        +
+ +                         ---------------------------                        +
+ +                                                                            +
+ + Response calculation at long wavelength                                    +
+ +                                                                            +
+ + ========================================================================== +
+ +                                                                            +
+ +  q-pt = (  0.010000  0.000000  0.000000)                                   +
+ +                                                                            +
+ + Head of the Frequency Dependent Dielectric Matrix (G=G'=0)                 +
+ +                                                                            +
+ + Frequency      Re:eps_{GG'}(q,w)      Im:eps_{GG'}(q,w)                    +
+ +                                                                            +
+ +    0.1000           12.2885            0.0226                              +
+ +    0.1500           12.3094            0.0340                              +
+ +    0.2000           12.3381            0.0463                              +
+ +    0.2500           12.3765            0.0607                              +
+ +    0.3000           12.4238            0.0765                              +
+ +    0.3500           12.4803            0.0956                              +
+ +    0.4000           12.5485            0.1170                              +
+ +    0.4500           12.6310            0.1431                              +
+ +    0.5000           12.7283            0.1753                              +
+ +    0.5500           12.8457            0.2175                              +
+ +    0.6000           12.9869            0.2775                              +
+ +    0.6500           13.1578            0.3697                              +
+ +    0.7000           13.3614            0.5287                              +
+ +    0.7500           13.5574            0.8253                              +
+ +    0.8000           13.5429            1.2930                              +
+ +    0.8500           13.1778            1.5501                              +
+ +    0.9000           12.8742            1.4235                              +
+ +    0.9500           12.9141            1.1400                              +
+ +    1.0000           13.1925            1.0657                              +
+ +    1.0500           13.4478            1.2123                              +
+ +    1.1000           13.5216            1.4390                              +
+ +    1.1500           13.5626            1.4800                              +
+ +    1.2000           13.8042            1.6353                              +
+ +    1.2500           13.8250            2.0239                              +
+ +    1.3000           13.5364            2.1445                              +
+ +    1.3500           13.5180            1.9213                              +
+ +    1.4000           13.7373            1.8620                              +
+ +    1.4500           13.9728            1.8649                              +
+ +    1.5000           14.2935            1.9550                              +
+ +    1.5500           14.5933            2.2231                              +
+ +    1.6000           14.7446            2.4866                              +
+ +    1.6500           14.9583            2.7977                              +
+ +    1.7000           14.9383            3.2385                              +
+ +    1.7500           14.6688            3.3523                              +
+ +    1.8000           14.6721            3.0881                              +
+ +    1.8500           15.1551            2.8555                              +
+ +    1.9000           15.8799            3.0169                              +
+ +    1.9500           16.5267            3.5401                              +
+ +    2.0000           16.9307            4.2825                              +
+ +    2.0500           17.0884            5.0432                              +
+ +    2.1000           17.0004            5.6651                              +
+ +    2.1500           17.0555            5.9171                              +
+ +    2.2000           17.5978            6.3462                              +
+ +    2.2500           18.2317            7.3660                              +
+ +    2.3000           18.3927            9.0294                              +
+ +    2.3500           17.5744           10.6154                              +
+ +    2.4000           16.4573           11.5957                              +
+ +    2.4500           15.1572           12.2975                              +
+ +    2.5000           13.6647           12.1808                              +
+ +    2.5500           13.1596           11.4743                              +
+ +    2.6000           13.3393           11.4979                              +
+ +    2.6500           13.1202           12.2862                              +
+ +    2.7000           12.0121           12.8747                              +
+ +    2.7500           10.9530           12.7330                              +
+ +    2.8000           10.0105           12.4844                              +
+ +    2.8500            9.1729           11.6939                              +
+ +    2.9000            9.1135           10.7706                              +
+ +    2.9500            9.4188           10.4089                              +
+ +    3.0000            9.4986           10.3928                              +
+ +    3.0500            9.3906           10.4454                              +
+ +    3.1000            8.9687           10.2968                              +
+ +    3.1500            8.8424            9.6806                              +
+ +    3.2000            9.2248            9.2196                              +
+ +    3.2500            9.7520            9.2175                              +
+ +    3.3000            9.9885            9.5120                              +
+ +    3.3500           10.0100            9.6814                              +
+ +    3.4000           10.0176            9.8736                              +
+ +    3.4500            9.8516            9.8549                              +
+ +    3.5000            9.9940            9.6592                              +
+ +    3.5500           10.3105            9.6630                              +
+ +    3.6000           10.5955            9.7880                              +
+ +    3.6500           10.8899            9.9402                              +
+ +    3.7000           11.2603           10.1453                              +
+ +    3.7500           11.6733           10.4987                              +
+ +    3.8000           12.0412           10.9203                              +
+ +    3.8500           12.6058           11.4317                              +
+ +    3.9000           13.1614           12.4501                              +
+ +    3.9500           13.2446           13.7388                              +
+ +    4.0000           12.9653           14.9448                              +
+ +    4.0500           12.3888           15.9742                              +
+ +    4.1000           11.8310           16.7395                              +
+ +    4.1500           11.2681           17.4319                              +
+ +    4.2000           10.8600           18.0214                              +
+ +    4.2500           10.6774           18.8026                              +
+ +    4.3000           10.4660           20.0690                              +
+ +    4.3500            9.8481           21.8088                              +
+ +    4.4000            8.4134           23.8919                              +
+ +    4.4500            5.7472           25.8525                              +
+ +    4.5000            1.6379           26.3662                              +
+ +    4.5500           -1.7753           24.5134                              +
+ +    4.6000           -3.4560           22.3019                              +
+ +    4.6500           -4.3955           20.5302                              +
+ +    4.7000           -5.1840           18.9096                              +
+ +    4.7500           -5.4355           17.3160                              +
+ +    4.8000           -5.6070           16.1924                              +
+ +    4.8500           -5.7844           14.8941                              +
+ +    4.9000           -5.5124           13.7550                              +
+ +    4.9500           -5.2213           12.9466                              +
+ +    5.0000           -4.8718           12.2169                              +
+ +    5.0500           -4.4307           11.7734                              +
+ +    5.1000           -4.1604           11.5750                              +
+ +    5.1500           -4.1190           11.3920                              +
+ +    5.2000           -4.0897           11.1179                              +
+ +    5.2500           -4.1304           10.9003                              +
+ +    5.3000           -4.2279           10.5804                              +
+ +    5.3500           -4.2830           10.1775                              +
+ +    5.4000           -4.2183            9.7373                              +
+ +    5.4500           -4.0849            9.3972                              +
+ +    5.5000           -3.9658            9.0903                              +
+ +    5.5500           -3.8368            8.7580                              +
+ +    5.6000           -3.5448            8.4309                              +
+ +    5.6500           -3.2108            8.3488                              +
+ +    5.7000           -3.0118            8.3139                              +
+ +    5.7500           -2.7762            8.3017                              +
+ +    5.8000           -2.5571            8.4349                              +
+ +    5.8500           -2.4730            8.6561                              +
+ +    5.9000           -2.4648            8.9013                              +
+ +    5.9500           -2.5816            9.3032                              +
+ +    6.0000           -3.1139            9.6968                              +
+ +    6.0500           -3.9278            9.6530                              +
+ +    6.1000           -4.5389            9.1482                              +
+ 
+ ************************** Forces **************************
+ *                                                          *
+ *               Cartesian components (eV/A)                *
+ * -------------------------------------------------------- *
+ *                         x            y            z      *
+ *                                                          *
+ * Ga              1      0.00006     -0.00000      0.00001 *
+ * As              1     -0.00006      0.00000     -0.00001 *
+ *                                                          *
+ ************************************************************
+ 
+ Pseudo atomic calculation performed for Ga 3d10 4s2 4p1
+ 
+ Converged in 34 iterations to a total energy of -1706.4086 eV
+ 
+ Pseudo atomic calculation performed for As 3d10 4s2 4p3
+ 
+ Converged in 37 iterations to a total energy of -2452.1008 eV
+Charge spilling parameter for spin component 1 = 0.07%
+ 
+            Orbital Populations       
+     Ion    Atom   Orbital             Charge
+  -------------------------------------------
+     Ga     1      Dzz                  1.998
+     Ga     1      Dzy                  1.999
+     Ga     1      Dzx                  1.999
+     Ga     1      Dxx-yy               1.999
+     Ga     1      Dxy                  1.999
+     Ga     1      S                    1.558
+     Ga     1      Px                   0.562
+     Ga     1      Py                   0.562
+     Ga     1      Pz                   0.562
+     Ga     1      S                   -0.494
+     As     1      Dzz                  2.000
+     As     1      Dzy                  2.000
+     As     1      Dzx                  2.000
+     As     1      Dxx-yy               2.000
+     As     1      Dxy                  2.000
+     As     1      S                    1.590
+     As     1      Px                   1.226
+     As     1      Py                   1.226
+     As     1      Pz                   1.226
+     As     1      S                   -0.009
+  -------------------------------------------
+                           Total:      28.000
+  -------------------------------------------
+ 
+     Atomic Populations (Mulliken)
+     -----------------------------
+Species          Ion     s       p       d       f      Total   Charge (e)
+==========================================================================
+  Ga              1     1.064   1.685   9.994   0.000  12.744     0.256
+  As              1     1.581   3.677   9.999   0.000  15.256    -0.256
+==========================================================================
+ 
+                 Bond                   Population      Length (A)
+======================================================================
+              Ga 1 -- As 1                   1.95        2.48990
+======================================================================
+ 
+ 
+ A BibTeX formatted list of references used in this run has been written to 
+ gaas.bib
+ 
+Initialisation time =     10.46 s
+Calculation time    =  42948.85 s
+Finalisation time   =      0.18 s
+Total time          =  42959.49 s
+Peak Memory Use     = 5161896 kB
+ 
+Overall parallel efficiency rating: Excellent (90%)
+ 
+Data was distributed by:-
+k-point (200-way); efficiency rating: Excellent (91%)
