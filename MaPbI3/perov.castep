@@ -1,0 +1,1058 @@
+ +-------------------------------------------------+
+ |                                                 |
+ |      CCC   AA    SSS  TTTTT  EEEEE  PPPP        |
+ |     C     A  A  S       T    E      P   P       |
+ |     C     AAAA   SS     T    EEE    PPPP        |
+ |     C     A  A     S    T    E      P           |
+ |      CCC  A  A  SSS     T    EEEEE  P           |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Academic Release CASTEP version 21.1 |          
+ | Ab Initio Total Energy Program                  |
+ |                                                 |
+ | Authors:                                        |
+ | M. Segall, M. Probert, C. Pickard, P. Hasnip,   |
+ | S. Clark, K. Refson, J. R. Yates, M. Payne      |
+ |                                                 |
+ | Contributors:                                   |
+ | P. Lindan, P. Haynes, J. White, V. Milman,      |
+ | N. Govind, M. Gibson, P. Tulip, V. Cocula,      |
+ | B. Montanari, D. Quigley, M. Glover,            |
+ | L. Bernasconi, A. Perlov, M. Plummer,           |
+ | E. McNellis, J. Meyer, J. Gale, D. Jochym       |
+ | J. Aarons, B. Walker, R. Gillen, D. Jones       |
+ | T. Green, I. J. Bush, C. J. Armstrong,          |
+ | E. J. Higgins, E. L. Brown, M. S. McFly,        |
+ | J. Wilkins, B-C. Shih, P. J. P. Byrne,          |
+ | R. J. Maurer, J. C. Womack, J. Dziedzic,        |
+ | A. Bartok-Partay, L. LeBlanc                    |
+ |                                                 |
+ | Copyright (c) 2000 - 2020                       |
+ |                                                 |
+ |     Distributed under license from Cambridge    |
+ |     Enterprise for academic use only.           |
+ |                                                 |
+ | Please cite                                     |
+ |                                                 |
+ |     "First principles methods using CASTEP"     |
+ |                                                 |
+ |         Zeitschrift fuer Kristallographie       |
+ |           220(5-6) pp. 567-570 (2005)           |
+ |                                                 |
+ | S. J. Clark, M. D. Segall, C. J. Pickard,       |
+ | P. J. Hasnip, M. J. Probert, K. Refson,         |
+ | M. C. Payne                                     |
+ |                                                 |
+ |       in all publications arising from          |
+ |              your use of CASTEP                 |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ |              http://www.castep.org              |
+ |                                                 |
+ +-------------------------------------------------+
+ 
+ 
+ 
+ Compiled for linux_x86_64_ifort on Thu, 22 Dec 2022 16:22:37 +0000
+ from code version 914bd18+  gw_castep_20  Tue Nov 29 18:38:57 2022 +0000
+ Compiler: Intel Fortran 19.1.0.166; Optimisation: fast
+ MATHLIBS: Intel MKL(2020.0.0) (LAPACK version 3.7.0)
+ FFT Lib : mkl
+ Fundamental constants values: CODATA 2014
+ 
+ Run started: Tue, 24 Jan 2023 05:31:53 +0000
+ +-------------------------------------------------+
+ |                                                 |
+ |  D D D D    F F F F F  P P P P     T T T T T    |
+ |  D       D  F          P       P       T        |
+ |  D       D  F F F F    P P P P         T        |
+ |  D       D  F          P               T        |
+ |  D D D D    F          P               T        |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Castep Linear Response (DFPT)        |
+ |                                                 |
+ | Copyright (c) 2006 - 2020                       |
+ |                                                 |
+ | Please cite the following publications in all   |
+ | work arising from your use of CASTEP LR.        |
+ |                                                 |
+ | K. Refson, S. J. Clark and P. R. Tulip          |
+ | Variational density functional perturbation     |
+ | theory for dielectrics and lattice dynamics     |
+ | Phys. Rev. B 73(15), 155114 (2006)              |
+ +-------------------------------------------------+
+ 
+ 
+ Atomic calculation performed for H: 1s1
+ 
+ Converged in 41 iterations to an ae energy of -12.488 eV
+ 
+   ============================================================                
+   | Pseudopotential Report - Date of generation 24-01-2023   |                
+   ------------------------------------------------------------                
+   | Element: H Ionic charge:  1.00 Level of theory: PBE      |                
+   | Atomic Solver: Koelling-Harmon                           |                
+   |                                                          |                
+   |               Reference Electronic Structure             |                
+   |         Orbital         Occupation         Energy        |                
+   |            1s              1.000           -0.239        |                
+   |                                                          |                
+   |                 Pseudopotential Definition               |                
+   |        Beta     l      e      Rc     scheme   norm       |                
+   |          1      0   -0.239   0.803     qc      1         |                
+   |         loc     1    0.000   0.803     pn      0         |                
+   |                                                          |                
+   | No charge augmentation                                   |                
+   | No partial core correction                               |                
+   ------------------------------------------------------------                
+   | "1|0.8|14|16|19|10N(qc=8)"                               |                
+   ------------------------------------------------------------                
+   |      Author: Chris J. Pickard, Cambridge University      |                
+   ============================================================                
+ 
+ Atomic calculation performed for C: 1s2 2s2 2p2
+ 
+ Converged in 54 iterations to an ae energy of -1027.632 eV
+ 
+   ============================================================                
+   | Pseudopotential Report - Date of generation 24-01-2023   |                
+   ------------------------------------------------------------                
+   | Element: C Ionic charge:  4.00 Level of theory: PBE      |                
+   | Atomic Solver: Koelling-Harmon                           |                
+   |                                                          |                
+   |               Reference Electronic Structure             |                
+   |         Orbital         Occupation         Energy        |                
+   |            2s              2.000           -0.505        |                
+   |            2p              2.000           -0.194        |                
+   |                                                          |                
+   |                 Pseudopotential Definition               |                
+   |        Beta     l      e      Rc     scheme   norm       |                
+   |          1      0   -0.505   1.201     qc      1         |                
+   |         loc     1   -0.194   1.201     qc      1         |                
+   |                                                          |                
+   | No charge augmentation                                   |                
+   | Partial core correction Rc = 0.839                       |                
+   ------------------------------------------------------------                
+   | "1|1.2|17|20|23|20N:21L(qc=8)"                           |                
+   ------------------------------------------------------------                
+   |      Author: Chris J. Pickard, Cambridge University      |                
+   ============================================================                
+ 
+ Atomic calculation performed for N: 1s2 2s2 2p3
+ 
+ Converged in 55 iterations to an ae energy of -1481.742 eV
+ 
+   ============================================================                
+   | Pseudopotential Report - Date of generation 24-01-2023   |                
+   ------------------------------------------------------------                
+   | Element: N Ionic charge:  5.00 Level of theory: PBE      |                
+   | Atomic Solver: Koelling-Harmon                           |                
+   |                                                          |                
+   |               Reference Electronic Structure             |                
+   |         Orbital         Occupation         Energy        |                
+   |            2s              2.000           -0.683        |                
+   |            2p              3.000           -0.261        |                
+   |                                                          |                
+   |                 Pseudopotential Definition               |                
+   |        Beta     l      e      Rc     scheme   norm       |                
+   |          1      0   -0.683   1.100     qc      1         |                
+   |         loc     1   -0.261   1.100     qc      1         |                
+   |                                                          |                
+   | No charge augmentation                                   |                
+   | Partial core correction Rc = 0.769                       |                
+   ------------------------------------------------------------                
+   | "1|1.1|23|26|31|20N:21L(qc=9)"                           |                
+   ------------------------------------------------------------                
+   |      Author: Chris J. Pickard, Cambridge University      |                
+   ============================================================                
+ 
+ Atomic calculation performed for I:
+ 1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 5s2 5p5
+ 
+ Converged in 72 iterations to an ae energy of -193646.801 eV
+ 
+   ============================================================                
+   | Pseudopotential Report - Date of generation 24-01-2023   |                
+   ------------------------------------------------------------                
+   | Element: I Ionic charge:  7.00 Level of theory: PBE      |                
+   | Atomic Solver: Koelling-Harmon                           |                
+   |                                                          |                
+   |               Reference Electronic Structure             |                
+   |         Orbital         Occupation         Energy        |                
+   |            5s              2.000           -0.640        |                
+   |            5p              5.000           -0.260        |                
+   |                                                          |                
+   |                 Pseudopotential Definition               |                
+   |        Beta     l      e      Rc     scheme   norm       |                
+   |          1      0   -0.640   2.199     qc      1         |                
+   |          2      1   -0.260   2.199     qc      1         |                
+   |         loc     2    0.000   2.199     pn      0         |                
+   |                                                          |                
+   | No charge augmentation                                   |                
+   | Partial core correction Rc = 1.537                       |                
+   ------------------------------------------------------------                
+   | "2|2.2|4|5|6|50N:51N"                                    |                
+   ------------------------------------------------------------                
+   |      Author: Chris J. Pickard, Cambridge University      |                
+   ============================================================                
+ 
+ Atomic calculation performed for Pb:
+ 1s2 2s2 2p6 3s2 3p6 3d10 4s2 4p6 4d10 4f14 5s2 5p6 5d10 6s2 6p2
+ 
+ Converged in 85 iterations to an ae energy of -568222.279 eV
+ 
+   ============================================================                
+   | Pseudopotential Report - Date of generation 24-01-2023   |                
+   ------------------------------------------------------------                
+   | Element: Pb Ionic charge: 14.00 Level of theory: PBE     |                
+   | Atomic Solver: Koelling-Harmon                           |                
+   |                                                          |                
+   |               Reference Electronic Structure             |                
+   |         Orbital         Occupation         Energy        |                
+   |            5d             10.000           -0.778        |                
+   |            6s              2.000           -0.442        |                
+   |            6p              2.000           -0.129        |                
+   |                                                          |                
+   |                 Pseudopotential Definition               |                
+   |        Beta     l      e      Rc     scheme   norm       |                
+   |          1      0   -0.442   2.403     qc      1         |                
+   |          2      0    0.250   2.403     qc      1         |                
+   |          3      1   -0.129   2.403     qc      1         |                
+   |          4      1    0.250   2.403     qc      1         |                
+   |          5      2   -0.778   2.403     qc      1         |                
+   |          6      2    0.250   2.403     qc      1         |                
+   |         loc     3    0.000   2.403     pn      0         |                
+   |                                                          |                
+   | No charge augmentation                                   |                
+   | Partial core correction Rc = 1.679                       |                
+   ------------------------------------------------------------                
+   | "3|2.4|12|14|26|60NN:61NN:52NN(qc=7)"                    |                
+   ------------------------------------------------------------                
+   |      Author: Chris J. Pickard, Cambridge University      |                
+   ============================================================                
+ 
+ Pseudo atomic calculation performed for H 1s1
+ 
+ Converged in 26 iterations to a total energy of -12.4824 eV
+ 
+ Pseudo atomic calculation performed for C 2s2 2p2
+ 
+ Converged in 36 iterations to a total energy of -152.4382 eV
+ 
+ Pseudo atomic calculation performed for N 2s2 2p3
+ 
+ Converged in 42 iterations to a total energy of -267.2084 eV
+ 
+ Pseudo atomic calculation performed for I 5s2 5p5
+ 
+ Converged in 29 iterations to a total energy of -623.6900 eV
+ 
+ Pseudo atomic calculation performed for Pb 5d10 6s2 6p2
+ 
+ Converged in 38 iterations to a total energy of -1730.2302 eV
+ Calculation parallelised over 500 processes.
+ Data is distributed by k-point(500-way)
+
+ ************************************ Title ************************************
+ 
+
+ ***************************** General Parameters ******************************
+  
+ output verbosity                               : normal  (1)
+ write checkpoint data to                       : perov.check
+ type of calculation                            : E-field calculation
+ stress calculation                             : off
+ density difference calculation                 : off
+ electron localisation func (ELF) calculation   : off
+ Hirshfeld analysis                             : off
+ polarisation (Berry phase) analysis            : off
+ molecular orbital projected DOS                : off
+ deltaSCF calculation                           : off
+ unlimited duration calculation
+ timing information                             : on
+ memory usage estimate                          : on
+ write extra output files                       : on
+ write final potential to formatted file        : off
+ write final density to formatted file          : off
+ write BibTeX reference list                    : on
+ write OTFG pseudopotential files               : on
+ write electrostatic potential file             : on
+ write bands file                               : on
+ checkpoint writing                             : off
+  
+ output         length unit                     : A
+ output           mass unit                     : amu
+ output           time unit                     : ps
+ output         charge unit                     : e
+ output           spin unit                     : hbar/2
+ output         energy unit                     : eV
+ output          force unit                     : eV/A
+ output       velocity unit                     : A/ps
+ output       pressure unit                     : GPa
+ output     inv_length unit                     : 1/A
+ output      frequency unit                     : cm-1
+ output force constant unit                     : eV/A**2
+ output         volume unit                     : A**3
+ output   IR intensity unit                     : (D/A)**2/amu
+ output         dipole unit                     : D
+ output         efield unit                     : eV/A/e
+ output        entropy unit                     : J/mol/K
+ output    efield chi2 unit                     : pm/V
+  
+ wavefunctions paging                           : none
+ random number generator seed                   : randomised (53155927)
+ data distribution                              : optimal for this architecture
+ optimization strategy                          : balance speed and memory
+
+ *********************** Exchange-Correlation Parameters ***********************
+  
+ using functional                               : Perdew Burke Ernzerhof
+ relativistic treatment                         : Koelling-Harmon
+ DFT+D: Semi-empirical dispersion correction    : off
+
+ ************************* Pseudopotential Parameters **************************
+  
+ pseudopotential representation                 : reciprocal space
+ <beta|phi> representation                      : reciprocal space
+ spin-orbit coupling                            : off
+
+ **************************** Basis Set Parameters *****************************
+  
+ plane wave basis set cut-off                   :  2000.0000   eV
+ size of standard grid                          :     1.7500
+ size of   fine   gmax                          :    40.0951   1/A
+ largest prime factor in FFT                    :          5
+ finite basis set correction                    : none
+
+ **************************** Electronic Parameters ****************************
+  
+ number of  electrons                           :  50.00    
+ net charge of system                           :  0.000    
+ treating system as non-spin-polarized
+ number of bands                                :         25
+
+ ********************* Electronic Minimization Parameters **********************
+  
+ Method: Treating system as non-metallic,
+         and number of  SD  steps               :          1
+         and number of  CG  steps               :          4
+  
+ total energy / atom convergence tol.           : 0.1000E-11   eV
+ max force / atom convergence tol.              : ignored
+ convergence tolerance window                   :          3   cycles
+ max. number of SCF cycles                      :         80
+ periodic dipole correction                     : NONE
+
+ *********************** Population Analysis Parameters ************************
+  
+ Population analysis with cutoff                :  3.000       A
+ Population analysis output                     : summary and pdos components
+
+ ***************************** E-Field Parameters ******************************
+  
+ E-field convergence tolerance                  : 0.1000E-04   A**3
+ DFPT solver method                             : AllBands (Gonze variational method)
+ ionic contribution to permittivity             : included
+ treating system as a crystal, 
+ => ignoring 3 lowest modes when calculating ionic  contribution to permittivity
+ calculation with frequency spacing             : 0.4556E-05   cm-1
+ Q-factor for lineshape broadening              :    50.0000
+ calculate non-linear optical properties        : OFF
+ max. number of E-field cycles                  :         50
+ max. number of E-field CG steps                :          0
+ convergence tolerance window                   :          2   cycles
+ band convergence tolerance                     : 0.1000E-08   eV
+
+ ******************************* Developer Code ********************************
+  
+ eta = 0.2
+ gw_convergence_win = 2
+ gw_energy_tol = 1.0e-6
+ gw_tol = 1.0e-4
+ gw_max_cycles = 1
+ start_omega = 0.1
+ end_omega = 4.1
+ num_freq = 41
+ write_stat = true
+
+ *******************************************************************************
+  
+ 
+                           -------------------------------
+                                      Unit Cell
+                           -------------------------------
+        Real Lattice(A)                      Reciprocal Lattice(1/A)
+     6.2901200     0.0000000     0.0000000        0.998897526   0.000000000   0.006292555
+     0.0000000     6.2738900     0.0000000        0.000000000   1.001481586   0.000000000
+    -0.0396674     0.0000000     6.2969151        0.000000000   0.000000000   0.997819607
+ 
+                       Lattice parameters(A)       Cell Angles
+                    a =      6.290120          alpha =   90.000000
+                    b =      6.273890          beta  =   90.360930
+                    c =      6.297040          gamma =   90.000000
+ 
+                       Current cell volume =           248.498439       A**3
+                                   density =             2.494899   AMU/A**3
+                                           =             4.142877     g/cm^3
+ 
+                           -------------------------------
+                                     Cell Contents
+                           -------------------------------
+                         Total number of ions in cell =   12
+                      Total number of species in cell =    5
+                        Max number of any one species =    6
+ 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            x  Element    Atom        Fractional coordinates of atoms  x
+            x            Number           u          v          w      x
+            x----------------------------------------------------------x
+            x  H            1         0.864508   0.999713   0.825735   x 
+            x  H            2         0.837794   0.143757   0.071928   x 
+            x  H            3         0.837589   0.856516   0.072383   x 
+            x  H            4         0.207588   0.134274   0.958134   x 
+            x  H            5         0.207393   0.865063   0.958497   x 
+            x  H            6         0.182013   0.000000   0.185353   x 
+            x  C            1         0.902780   0.000000   0.996335   x 
+            x  N            1         0.136583   0.000000   0.024878   x 
+            x  I            1         0.426803   0.500000   0.972609   x 
+            x  I            2         0.435860   0.000000   0.506542   x 
+            x  I            3         0.962898   0.500227   0.447747   x 
+            x  Pb           1         0.476171   0.500000   0.475647   x 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ 
+ 
+                         No user defined ionic velocities
+ 
+                           -------------------------------
+                                   Details of Species
+                           -------------------------------
+ 
+                               Mass of species in AMU
+                                    H    1.0079400
+                                    C   12.0107000
+                                    N   14.0067400
+                                    I  126.9044700
+                                    Pb  207.2000000
+ 
+                          Electric Quadrupole Moment (Barn)
+                                    H    0.0028600 Isotope  2
+                                    C    0.0332700 Isotope 11
+                                    N    0.0204400 Isotope 14
+                                    I   -0.6960000 Isotope127
+                                    Pb   -0.2690000 Isotope209
+ 
+                          Files used for pseudopotentials:
+                                    H 1|0.8|14|16|19|10N(qc=8)
+                                    C 1|1.2|17|20|23|20N:21L(qc=8)
+                                    N 1|1.1|23|26|31|20N:21L(qc=9)
+                                    I 2|2.2|4|5|6|50N:51N
+                                    Pb 3|2.4|12|14|26|60NN:61NN:52NN(qc=7)
+ 
+                           -------------------------------
+                              k-Points For BZ Sampling
+                           -------------------------------
+                       MP grid size for SCF calculation is 20 20 20
+                            with an offset of   0.000  0.000  0.000
+                       Number of kpoints used =          4000
+ 
+                           -------------------------------
+                               Symmetry and Constraints
+                           -------------------------------
+ 
+                      Maximum deviation from symmetry =  0.00000         ANG
+ 
+                      Number of symmetry operations   =           1
+                      Number of ionic constraints     =           3
+                      Point group of crystal =     1: C1, 1, 1
+                      Space group of crystal =     1: P1, P 1
+ 
+             Set iprint > 1 for details on symmetry rotations/translations
+ 
+                         Centre of mass is constrained
+             Set iprint > 1 for details of linear ionic constraints
+ 
+                         Number of cell constraints= 0
+                         Cell constraints are:  1 2 3 4 5 6
+ 
+                         External pressure/stress (GPa)
+                          0.00000   0.00000   0.00000
+                                    0.00000   0.00000
+                                              0.00000
+  
++---------------- MEMORY AND SCRATCH DISK ESTIMATES PER PROCESS --------------+
+|                                                     Memory          Disk    |
+| Baseline code, static data and system overhead      329.0 MB         0.0 MB |
+| BLAS internal memory storage                          0.0 MB         0.0 MB |
+| Model and support data                              738.6 MB         0.0 MB |
+| Electronic energy minimisation requirements         822.7 MB         0.0 MB |
+| Force calculation requirements                       77.0 MB         0.0 MB |
+|                                               ----------------------------- |
+| Approx. total storage required per process         1890.3 MB         0.0 MB |
+|                                                                             |
+| Requirements will fluctuate during execution and may exceed these estimates |
++-----------------------------------------------------------------------------+
+Calculating approximate eigenstates for fixed initial Hamiltonian
+Cut-off for approx. calculation is   89.988 eV
+Improving approx. states at cut-off of 1000.000 eV
+Resetting cut-off to 2000.000 eV
+Improving states further at cut-off of 2000.000 eV
+Calculating total energy with cut-off of 2000.000 eV.
+------------------------------------------------------------------------ <-- SCF
+SCF loop      Energy                           Energy gain       Timer   <-- SCF
+                                               per atom          (sec)   <-- SCF
+------------------------------------------------------------------------ <-- SCF
+Initial  -4.14063228E+003                                        242.54  <-- SCF
+      1  -4.14525864E+003                    3.85530041E-001     311.81  <-- SCF
+      2  -4.14608055E+003                    6.84925047E-002     374.15  <-- SCF
+      3  -4.14637440E+003                    2.44868752E-002     436.70  <-- SCF
+      4  -4.14650097E+003                    1.05477766E-002     499.03  <-- SCF
+      5  -4.14655018E+003                    4.10115235E-003     561.36  <-- SCF
+      6  -4.14656780E+003                    1.46762538E-003     623.51  <-- SCF
+      7  -4.14657382E+003                    5.02281675E-004     685.63  <-- SCF
+      8  -4.14657609E+003                    1.88546365E-004     747.86  <-- SCF
+      9  -4.14657702E+003                    7.81275849E-005     809.92  <-- SCF
+     10  -4.14657752E+003                    4.10428660E-005     872.13  <-- SCF
+     11  -4.14657772E+003                    1.66445311E-005     934.31  <-- SCF
+     12  -4.14657778E+003                    5.05051145E-006     996.59  <-- SCF
+     13  -4.14657779E+003                    1.43257054E-006    1058.84  <-- SCF
+     14  -4.14657780E+003                    3.99029789E-007    1121.23  <-- SCF
+     15  -4.14657780E+003                    1.12187647E-007    1183.36  <-- SCF
+     16  -4.14657780E+003                    3.18580367E-008    1245.48  <-- SCF
+     17  -4.14657780E+003                    9.24276852E-009    1307.82  <-- SCF
+     18  -4.14657780E+003                    2.72692317E-009    1370.14  <-- SCF
+     19  -4.14657780E+003                    8.21473440E-010    1432.51  <-- SCF
+     20  -4.14657780E+003                    2.47163867E-010    1494.70  <-- SCF
+     21  -4.14657780E+003                    8.32043160E-011    1556.92  <-- SCF
+     22  -4.14657780E+003                    2.10749894E-011    1621.66  <-- SCF
+     23  -4.14657780E+003                    7.99173910E-012    1691.49  <-- SCF
+     24  -4.14657780E+003                    0.00000000E+000    1828.61  <-- SCF
+     25  -4.14657780E+003                    3.35137446E-012    1939.34  <-- SCF
+     26  -4.14657780E+003                    1.99793478E-012    2057.18  <-- SCF
+     27  -4.14657780E+003                    0.00000000E+000    2194.14  <-- SCF
+     28  -4.14657780E+003                    0.00000000E+000    2331.13  <-- SCF
+------------------------------------------------------------------------ <-- SCF
+ 
+Final energy =  -4146.577799634     eV
+(energy not corrected for finite basis set)
+ 
+  scf kpoint data stored
+ 
+--------------------------------------------------------------------------------
+ Comms strategy in GW module 
+ Data is distributed by G-vector(1-way) and k-point(500-way) and band(1-way)
+--------------------------------------------------------------------------------
+ 
+Energy Unit:  eV
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.7  E_2       0.005673251                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.4  E_2       0.005688356                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.3  E_2       0.005749336                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.2  E_2       0.005877094                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.4  E_2       0.006013299                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.2  E_2       0.006191674                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.5  E_2       0.006419429                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  10.8  E_2       0.006717899                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  11.2  E_2       0.007050310                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  11.8  E_2       0.007502118                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  12.5  E_2       0.008101457                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  13.2  E_2       0.008874692                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  14.5  E_2       0.009897520                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  20.8  E_2       0.011299406                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  20.8  E_2       0.012847471                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  21.3  E_2       0.014229730                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  24.5  E_2       0.016017584                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  24.4  E_2       0.017631856                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  26.2  E_2       0.019248162                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  26.6  E_2       0.020765909                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  26.8  E_2       0.022919031                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  30.1  E_2       0.023946468                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  32.7  E_2       0.024863989                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  28.0  E_2       0.024920756                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  29.8  E_2       0.024067002                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  31.9  E_2       0.023126413                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  37.1  E_2       0.021776626                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  45.8  E_2       0.020051049                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  48.2  E_2       0.018138906                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  53.1  E_2       0.016307388                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  54.6  E_2       0.013960228                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  50.3  E_2       0.011731755                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  47.2  E_2       0.009969190                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  47.7  E_2       0.008340573                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  47.1  E_2       0.006996761                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  48.4  E_2       0.005883045                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  48.8  E_2       0.004864568                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  46.2  E_2       0.003826598                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  49.6  E_2       0.002950450                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  59.9  E_2       0.002341983                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+----------------------------------------------------------------------- <-- NSCF
+loop_iter   1  av_CG_steps  56.1  E_2       0.001815102                 <-- NSCF
+----------------------------------------------------------------------- <-- NSCF
+ 
+1st-order wvfn converged in 1 SCF cycle, we are computing an NSCF response
+ 
+ 
+ ==============================================================================
+ +                                                                            +
+ +                         GW NSCF Dielectric Response                        +
+ +                         ---------------------------                        +
+ +                                                                            +
+ + Response calculation at long wavelength                                    +
+ +                                                                            +
+ + ========================================================================== +
+ +                                                                            +
+ +  q-pt = (  0.010000  0.000000  0.000000)                                   +
+ +                                                                            +
+ + Head of the Frequency Dependent Dielectric Matrix (G=G'=0)                 +
+ +                                                                            +
+ + Frequency      Re:eps_{GG'}(q,w)      Im:eps_{GG'}(q,w)                    +
+ +                                                                            +
+ +    0.1000            5.3822           -0.6867                              +
+ +    0.2000            5.3911           -0.6689                              +
+ +    0.3000            5.4186           -0.6520                              +
+ +    0.4000            5.4730           -0.6339                              +
+ +    0.5000            5.5309           -0.6085                              +
+ +    0.6000            5.6061           -0.5696                              +
+ +    0.7000            5.7008           -0.5111                              +
+ +    0.8000            5.8206           -0.4410                              +
+ +    0.9000            5.9514           -0.3330                              +
+ +    1.0000            6.1225           -0.1106                              +
+ +    1.1000            6.3295            0.0729                              +
+ +    1.2000            6.5762            0.3122                              +
+ +    1.3000            6.8671            0.6713                              +
+ +    1.4000            7.2243            1.0861                              +
+ +    1.5000            7.5513            1.6042                              +
+ +    1.6000            7.7855            2.1008                              +
+ +    1.7000            8.0670            2.6340                              +
+ +    1.8000            8.2439            3.1928                              +
+ +    1.9000            8.3659            3.7680                              +
+ +    2.0000            8.4419            4.3007                              +
+ +    2.1000            8.5500            4.9587                              +
+ +    2.2000            8.3156            5.6301                              +
+ +    2.3000            7.8771            6.4145                              +
+ +    2.4000            7.1852            7.0930                              +
+ +    2.5000            6.3423            7.5414                              +
+ +    2.6000            5.5247            7.8412                              +
+ +    2.7000            4.6256            7.9932                              +
+ +    2.8000            3.7702            7.9436                              +
+ +    2.9000            2.9182            7.7578                              +
+ +    3.0000            2.2266            7.4679                              +
+ +    3.1000            1.6216            6.9599                              +
+ +    3.2000            1.2626            6.3824                              +
+ +    3.3000            0.9580            5.8697                              +
+ +    3.4000            0.7368            5.3408                              +
+ +    3.5000            0.6659            4.8623                              +
+ +    3.6000            0.5561            4.4200                              +
+ +    3.7000            0.4590            3.9704                              +
+ +    3.8000            0.3647            3.4510                              +
+ +    3.9000            0.3848            2.9617                              +
+ +    4.0000            0.4099            2.5691                              +
+ +    4.1000            0.5033            2.1884                              +
+ +                                                                            +
+ + -------------------------------------------------------------------------- +
+ +                                                                            +
+ + G=0 component of the first order response charge density                   +
+ +                                                                            +
+ + Frequency      Re:den1_{GG'}(q,w)      Im:den1_{GG'}(q,w)                  +
+ +                                                                            +
+ +    0.1000            0.0163           -0.0026                              +
+ +    0.2000            0.0164           -0.0025                              +
+ +    0.3000            0.0165           -0.0024                              +
+ +    0.4000            0.0167           -0.0024                              +
+ +    0.5000            0.0169           -0.0023                              +
+ +    0.6000            0.0172           -0.0021                              +
+ +    0.7000            0.0175           -0.0019                              +
+ +    0.8000            0.0180           -0.0016                              +
+ +    0.9000            0.0185           -0.0012                              +
+ +    1.0000            0.0191           -0.0004                              +
+ +    1.1000            0.0199            0.0003                              +
+ +    1.2000            0.0208            0.0012                              +
+ +    1.3000            0.0219            0.0025                              +
+ +    1.4000            0.0232            0.0040                              +
+ +    1.5000            0.0244            0.0060                              +
+ +    1.6000            0.0253            0.0078                              +
+ +    1.7000            0.0264            0.0098                              +
+ +    1.8000            0.0270            0.0119                              +
+ +    1.9000            0.0275            0.0141                              +
+ +    2.0000            0.0277            0.0160                              +
+ +    2.1000            0.0282            0.0185                              +
+ +    2.2000            0.0273            0.0210                              +
+ +    2.3000            0.0256            0.0239                              +
+ +    2.4000            0.0231            0.0264                              +
+ +    2.5000            0.0199            0.0281                              +
+ +    2.6000            0.0169            0.0292                              +
+ +    2.7000            0.0135            0.0298                              +
+ +    2.8000            0.0103            0.0296                              +
+ +    2.9000            0.0072            0.0289                              +
+ +    3.0000            0.0046            0.0278                              +
+ +    3.1000            0.0023            0.0260                              +
+ +    3.2000            0.0010            0.0238                              +
+ +    3.3000           -0.0002            0.0219                              +
+ +    3.4000           -0.0010            0.0199                              +
+ +    3.5000           -0.0012            0.0181                              +
+ +    3.6000           -0.0017            0.0165                              +
+ +    3.7000           -0.0020            0.0148                              +
+ +    3.8000           -0.0024            0.0129                              +
+ +    3.9000           -0.0023            0.0110                              +
+ +    4.0000           -0.0022            0.0096                              +
+ +    4.1000           -0.0019            0.0082                              +
+ +                                                                            +
+ + ========================================================================== +
+ 
+ ************************** Forces **************************
+ *                                                          *
+ *               Cartesian components (eV/A)                *
+ * -------------------------------------------------------- *
+ *                         x            y            z      *
+ *                                                          *
+ * H               1      0.05499      0.00147      0.18641 *
+ * H               2      0.07348     -0.16530     -0.09684 *
+ * H               3      0.08279      0.17289     -0.09968 *
+ * H               4     -0.07672     -0.14035      0.07529 *
+ * H               5     -0.09681      0.19189      0.09522 *
+ * H               6     -0.06278      0.00585     -0.19165 *
+ * C               1     -0.51945     -0.00149     -0.06395 *
+ * N               1      0.48509     -0.06599      0.06815 *
+ * I               1      0.02221      0.00094     -0.00131 *
+ * I               2      0.02181      0.00054      0.02165 *
+ * I               3      0.00804     -0.00024      0.01103 *
+ * Pb              1      0.00735     -0.00022     -0.00433 *
+ *                                                          *
+ ************************************************************
+ 
+ Pseudo atomic calculation performed for H 1s1
+ 
+ Converged in 26 iterations to a total energy of -12.4824 eV
+ 
+ Pseudo atomic calculation performed for C 2s2 2p2
+ 
+ Converged in 36 iterations to a total energy of -152.4382 eV
+ 
+ Pseudo atomic calculation performed for N 2s2 2p3
+ 
+ Converged in 42 iterations to a total energy of -267.2084 eV
+ 
+ Pseudo atomic calculation performed for I 5s2 5p5
+ 
+ Converged in 29 iterations to a total energy of -623.6900 eV
+ 
+ Pseudo atomic calculation performed for Pb 5d10 6s2 6p2
+ 
+ Converged in 38 iterations to a total energy of -1730.2302 eV
+Charge spilling parameter for spin component 1 = 0.58%
+ 
+            Orbital Populations       
+     Ion    Atom   Orbital             Charge
+  -------------------------------------------
+      H     1      S                    0.778
+      H     2      S                    0.784
+      H     3      S                    0.784
+      H     4      S                    0.635
+      H     5      S                    0.636
+      H     6      S                    0.644
+      C     1      S                    1.299
+      C     1      Px                   0.775
+      C     1      Py                   1.246
+      C     1      Pz                   1.241
+      N     1      S                    1.571
+      N     1      Px                   1.281
+      N     1      Py                   1.422
+      N     1      Pz                   1.424
+      I     1      S                    1.967
+      I     1      Px                   1.925
+      I     1      Py                   1.901
+      I     1      Pz                   1.626
+      I     1      S                   -0.140
+      I     2      S                    1.968
+      I     2      Px                   1.925
+      I     2      Py                   1.618
+      I     2      Pz                   1.919
+      I     2      S                   -0.140
+      I     3      S                    1.967
+      I     3      Px                   1.587
+      I     3      Py                   1.942
+      I     3      Pz                   1.938
+      I     3      S                   -0.045
+     Pb     1      Dzz                  2.000
+     Pb     1      Dzy                  2.000
+     Pb     1      Dzx                  2.000
+     Pb     1      Dxx-yy               2.000
+     Pb     1      Dxy                  2.000
+     Pb     1      S                    1.863
+     Pb     1      Px                   0.541
+     Pb     1      Py                   0.518
+     Pb     1      Pz                   0.513
+     Pb     1      S                    0.091
+  -------------------------------------------
+                           Total:      50.000
+  -------------------------------------------
+ 
+     Atomic Populations (Mulliken)
+     -----------------------------
+Species          Ion     s       p       d       f      Total   Charge (e)
+==========================================================================
+  H               1     0.778   0.000   0.000   0.000   0.778     0.222
+  H               2     0.784   0.000   0.000   0.000   0.784     0.216
+  H               3     0.784   0.000   0.000   0.000   0.784     0.216
+  H               4     0.635   0.000   0.000   0.000   0.635     0.365
+  H               5     0.636   0.000   0.000   0.000   0.636     0.364
+  H               6     0.644   0.000   0.000   0.000   0.644     0.356
+  C               1     1.299   3.263   0.000   0.000   4.562    -0.562
+  N               1     1.571   4.127   0.000   0.000   5.698    -0.698
+  I               1     1.827   5.452   0.000   0.000   7.278    -0.278
+  I               2     1.827   5.461   0.000   0.000   7.289    -0.289
+  I               3     1.922   5.466   0.000   0.000   7.388    -0.388
+  Pb              1     1.954   1.572   9.999   0.000  13.524     0.476
+==========================================================================
+ 
+                 Bond                   Population      Length (A)
+======================================================================
+               H 4 -- N 1                    0.70        1.04315
+               H 5 -- N 1                    0.70        1.04506
+               H 6 -- N 1                    0.69        1.04841
+               H 1 -- C 1                    0.90        1.09944
+               H 2 -- C 1                    0.90        1.09981
+               H 3 -- C 1                    0.90        1.10014
+               C 1 -- N 1                    0.50        1.48047
+               H 4 -- H 6                   -0.09        1.66903
+               H 5 -- H 6                   -0.09        1.66905
+               H 4 -- H 5                   -0.08        1.68900
+               H 2 -- H 3                   -0.08        1.80212
+               H 1 -- H 3                   -0.08        1.80316
+               H 1 -- H 2                   -0.08        1.80322
+               H 2 -- N 1                   -0.11        2.10724
+               H 3 -- N 1                   -0.11        2.10808
+               H 4 -- C 1                   -0.11        2.10934
+               H 5 -- C 1                   -0.11        2.10962
+               H 1 -- N 1                   -0.11        2.11527
+               H 6 -- C 1                   -0.11        2.11550
+               H 2 -- H 4                   -0.02        2.43896
+               H 3 -- H 5                   -0.02        2.43905
+               H 3 -- H 6                   -0.02        2.44757
+               H 2 -- H 6                   -0.02        2.44788
+               H 1 -- H 5                   -0.02        2.45796
+               H 1 -- H 4                   -0.02        2.45808
+               H 6 -- I 2                   -0.02        2.56895
+               H 5 -- I 1                   -0.04        2.67523
+               H 4 -- I 1                   -0.04        2.67823
+               H 3 -- H 4                    0.04        2.99865
+               H 2 -- H 5                    0.04        2.99886
+======================================================================
+ 
+ 
+ A BibTeX formatted list of references used in this run has been written to 
+ perov.bib
+ 
+Initialisation time =     20.32 s
+Calculation time    =  17477.63 s
+Finalisation time   =      0.89 s
+Total time          =  17498.84 s
+Peak Memory Use     = 3701344 kB
+  
+Overall parallel efficiency rating: Satisfactory (68%)                          
+  
+Data was distributed by:-
+k-point (500-way); efficiency rating: Good (75%)                                
